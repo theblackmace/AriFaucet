@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="flex flex-col h-screen">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customHeader: '#EEFFB9', // Custom color for the header
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal flex flex-col flex-1">
+    <header class="text-gray-800 bg-customHeader p-4 flex items-center justify-between">
+        <p class="text-md mr-4" id="address-showcase"></p>
+        <button class="bg-blue-500 hover:bg-red-600 active:bg-red-800 focus:outline-none focus:ring focus:ring-violet-300 text-white font-bold py-2 px-4 rounded" id="ConnectBtn">Connect</button>
+    </header>
+    <div class="container mx-auto mt-8 p-8 bg-white rounded shadow flex-1 flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold mb-2 text-center">$ARI token Faucet</h1>
+        <p class="mb-4 text-center">You'll get 10 $ARI minted on the address you connect by clicking the button below.</p>
+        <p class="mb-4 text-center text-red-500">Note: These tokens are on testnets and only exist for the purpose of testing the demo. This has no real world use case.</p>
+        <button class="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" id="MintButton">Mint $ARI</button>
+    </div>
+    <footer class="text-center p-4 mt-8 bg-gray-200 text-gray-700">
+        Cooldown for the faucet is 10s
+    </footer>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="./driver.js" type="module"></script>
+
+</body>
+</html>
