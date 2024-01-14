@@ -25,6 +25,7 @@ async function connectWithMetaMsk() {
             document.getElementById('address-showcase').innerHTML = shortenEthereumAddress(connAddress);
         } else {
             console.log("User didn't approve the account request.");
+            alert("Browser wallet not found or user denied the request.");
         }
     } catch (error) {
         console.log(error);
